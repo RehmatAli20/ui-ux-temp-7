@@ -131,15 +131,15 @@ export default function SliderComponent() {
       {/* Mobile View */}
       <div className="lg:hidden">
         <Swiper
-          spaceBetween={2}
-          slidesPerView={1.1} // Show a part of the next card for better visibility
+          spaceBetween={10}
+          slidesPerView={1.2} // Show a part of the next card for better visibility
           loop={true}
         >
           {cars.map((car) => (
             <SwiperSlide key={car.id}>
               <div
                 key={car.id}
-                className="h-[400px] sm:w-[85%]  w-[400px] mx-auto  mt-4 mb-4  shadow-lg rounded-lg bg-white
+                className=" h-[286px] sm:h-[400px] sm:w-[85%]  w-[240px] mx-auto  mt-4 mb-4  shadow-lg rounded-lg bg-white
              flex flex-col   items-center"
               >
                 <div className="w-[90%] m-auto mt-5 h-[20%] flex justify-between ">
@@ -168,32 +168,37 @@ export default function SliderComponent() {
                   <div className="w-[100%] h-[24px] flex justify-evenly gap-8">
                     <div className=" w-[58px] h-[24px] flex gap-2">
                       <Image
+                        className="w-[14px] h-[14px] sm:w-[24px] sm:h-[24px]"
                         src={"/icon/gas.png"}
                         alt="icon"
                         width={24}
                         height={24}
                       ></Image>
-                      <p className="text-customgray">{car.fule}</p>
+                      <p className="text-customgray text-[10px] sm:text-[16px]">{car.fule}</p>
                     </div>
 
                     <div className=" w-[58px] h-[24px] flex gap-1">
                       <Image
+                                              className="w-[14px] h-[14px] sm:w-[24px] sm:h-[24px]"
+
                         src={"/icon/circle.png"}
                         alt="icon"
                         width={24}
                         height={24}
                       ></Image>
-                      <p className="text-customgray">Manual</p>
+                      <p className="text-customgray text-[10px] sm:text-[16px]">Manual</p>
                     </div>
 
                     <div className=" w-[58px] h-[24px] flex gap-1">
                       <Image
+                                              className="w-[14px] h-[14px] sm:w-[24px] sm:h-[24px]"
+
                         src={"/icon/profile.png"}
                         alt="icon"
                         width={24}
                         height={24}
                       ></Image>
-                      <p className="text-customgray">{car.Person}People</p>
+                      <p className="text-customgray text-[10px] sm:text-[16px]">{car.Person}People</p>
                     </div>
                   </div>
 
@@ -202,14 +207,13 @@ export default function SliderComponent() {
                       <p>{car.price}</p>
                       <p className="text-customgray">day</p>
                     </div>
-                    <button className="w-[116px] h-[44px] bg-customblue rounded-[4px] text-customwhite">
+                    <button className=" w-[116px]  h-[44px] bg-customblue rounded-[4px] text-customwhite">
                       Rent Now
                     </button>
                   </div>
                 </div>
 
-                {/* <h3 className="text-xl font-bold">{car.name}</h3>
-                <p className="text-gray-600">{car.description}</p> */}
+               
               </div>
             </SwiperSlide>
           ))}

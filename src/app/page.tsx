@@ -65,13 +65,13 @@ export default function Home() {
         </div>
 
 
-        <div className=" h-auto p-5 xl:h-[162px]  m-8 md:m-1  flex items-center justify-around flex-wrap">
+        <div className=" h-auto p-5 xl:h-[162px]  m-8 md:m-1 flex justify-center items-center flex-col  sm:flex sm:items-center sm:justify-around sm:flex-wrap">
 
 
 
 
+        <Pick/> 
 
-        <Pick/>
 
 
           <div className="h-[60px]  flex justify-center xl:w-[60px] w-[100%] m-[30px] ">
