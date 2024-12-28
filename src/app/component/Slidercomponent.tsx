@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react"; 
-
+import Link from "next/link";
 import "swiper/css";
 
 const cars = [
@@ -15,6 +15,7 @@ const cars = [
     price: "$99.00/",
     fule: "80L",
     Person: "2",
+    types: "Sport",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const cars = [
     price: "$80.50/",
     fule: "90L",
     Person: "4",
+    types: "Sport",
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const cars = [
     price: "$96.00/",
     fule: "70L",
     Person: "4",
+    types: "Sport",
   },
   {
     id: 4,
@@ -42,16 +45,16 @@ const cars = [
     price: "$80.00/",
     fule: "120L",
     Person: "2",
+    types: "Sport",
   },
-  // { id: 5, name: "Toyota Supra", description: "Japanese Icon", image: "/images/supra.jpg", logo: "/icon/heart.png",g" },
-  // { id: 6, name: "BMW i8", description: "Hybrid Supercar", image: "/images/bmw.jpg", logo: "/logos/bmw-logo.png" },
+
 ];
 
 export default function SliderComponent() {
   return (
     <div className="2xl:w-[1440px] md:w-[98%] m-auto mt-8">
       {/* Desktop View */}
-      <div className="w-[98%]  bg-transparent m-auto h-[44px] flex justify-between items-center ">
+      <div className="w-[98%]  bg-transparent m-auto h-[44px] hidden  lg:flex justify-between items-center ">
         <p className="text-customgray text-[24px] ml-4 ">Popular Car</p>
         <button className="text-customblue text-[24px] mr-4">View All</button>
       </div>
@@ -120,13 +123,19 @@ export default function SliderComponent() {
                   <p className="text-customgray">day</p>
                 </div>
                 <button className="w-[116px] h-[44px] bg-customblue rounded-[4px] text-customwhite">
-                  Rent Now
+                <Link
+                          href={{ pathname: `../Category/[Dynamicdisplay] ${car.id}`, query: car }}
+                        >
+                          Rent Now
+                        </Link>
                 </button>
               </div>
             </div>
           </div>
         ))}
       </div>
+
+
 
       {/* Mobile View */}
       <div className="lg:hidden">
@@ -208,7 +217,11 @@ export default function SliderComponent() {
                       <p className="text-customgray">day</p>
                     </div>
                     <button className=" w-[116px]  h-[44px] bg-customblue rounded-[4px] text-customwhite">
-                      Rent Now
+                    <Link
+                          href={{ pathname: `../Category/[Dynamicdisplay] ${car.id}`, query: car }}
+                        >
+                          Rent Now
+                        </Link>
                     </button>
                   </div>
                 </div>
@@ -219,6 +232,11 @@ export default function SliderComponent() {
           ))}
         </Swiper>
       </div>
+
+
+
+
+
     </div>
   );
 }

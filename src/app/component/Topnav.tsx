@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Topnav() {
   return (
@@ -12,13 +13,16 @@ export default function Topnav() {
         <div className="w-full flex justify-center gap-10 items-center md:h-[44px] md:w-[492px] md:bg-customwhite md:rounded-[70px] shadow-sm md:border-[1px] md:absolute md:left-[260px] md:flex">
           <div className="border-[1px] md:border-none w-[263px] gap-4 h-[48px] flex items-center bg-customwhite shadow-sm md:shadow-none md:bg-transparent rounded-[5px] md:h-[44px] md:flex md:items-center md:w-[90%] md:gap-5">
             <div>
-              <Image src="/icon/search.png" className="relative left-3" alt="icon" width={24} height={24} />
+              <Image src="/icon/search.png" className="relative  left-3" alt="icon" width={24} height={24} />
             </div>
             <input type="text" className="h-[42px] w-[90%] border-none outline-none" placeholder="Search Something here.." />
           </div>
 
-          <div className="w-[48px] h-[48px] flex items-center justify-center shadow-sm md:shadow-none md:border-none border-[1px] rounded-[5px] bg-customwhite md:bg-transparent">
+          <div className="w-[48px] h-[48px] hover:cursor-pointer flex items-center justify-center shadow-sm md:shadow-none md:border-none border-[1px] rounded-[5px] bg-customwhite md:bg-transparent">
+          
+        <Link href={"/Category"}>
             <Image src="/icon/filter.png" className="md:absolute md:right-4 top-3" alt="icon" width={24} height={24} />
+            </Link>
           </div>
         </div>
 
