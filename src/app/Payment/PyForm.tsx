@@ -35,7 +35,7 @@ export default function PyForm() {
         <div className=" h-[88px] w-[295px] relative bottom-5  md:h-[92px] md:w-[386px] flex justify-between flex-col">
           <h1>Name</h1>
           <input
-            className="h-[56px] w-[100%] flex items-center p-6 bg-[#eaebee] rounded-[10px]"
+            className="h-[56px] w-[100%] flex items-center outline-none p-6 bg-[#eaebee] rounded-[10px]"
             type="text"
             placeholder="Your name"
           />
@@ -43,7 +43,7 @@ export default function PyForm() {
         <div className=" h-[88px] w-[295px]  relative bottom-5 md:h-[92px] md:w-[386px] flex justify-between flex-col">
           <h1>Phone Number</h1>
           <input
-            className="h-[56px] w-[100%] flex items-center p-6 bg-[#eaebee] rounded-[10px]"
+            className="h-[56px] w-[100%] flex items-center p-6 bg-[#eaebee] outline-none rounded-[10px]"
             type="text"
             placeholder="Phone Number"
           />
@@ -51,7 +51,7 @@ export default function PyForm() {
         <div className=" h-[88px] w-[295px]  relative bottom-5 md:h-[92px] md:w-[386px] flex justify-between flex-col">
           <h1>Address</h1>
           <input
-            className="h-[56px] w-[100%] flex items-center p-6 bg-[#eaebee] rounded-[10px]"
+            className="h-[56px] w-[100%] flex items-center p-6 bg-[#eaebee]  outline-none rounded-[10px]"
             type="text"
             placeholder="Address"
           />
@@ -59,7 +59,7 @@ export default function PyForm() {
         <div className=" h-[88px] w-[295px] relative bottom-5 md:h-[92px] md:w-[386px] flex justify-between flex-col">
           <h1>Town / City</h1>
           <input
-            className="h-[56px] w-[100%] flex items-center p-6 bg-[#eaebee] rounded-[10px]"
+            className="h-[56px] w-[100%] flex items-center p-6 bg-[#eaebee]  outline-none rounded-[10px]"
             type="text"
             placeholder="Town or City"
           />

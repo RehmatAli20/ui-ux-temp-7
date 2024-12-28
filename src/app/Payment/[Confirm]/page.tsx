@@ -15,7 +15,7 @@ export default function page() {
   const types = searchParams.get("types");
   const logo = searchParams.get("logo");
   return (
-    <div className="2xl:w-[1440px] lg:flex flex flex-col-reverse mb-48 bg-orange-300 justify-center lg:justify-around lg:flex-row gap-4 p-1 m-auto ">
+    <div className="2xl:w-[1440px] lg:flex flex flex-col-reverse mb-48 bg-[#F6F7F9] justify-center lg:justify-around lg:flex-row gap-4 p-1 m-auto ">
       <Link  className="hidden"
         href={{  
           pathname: `/Pyform`,
@@ -56,12 +56,12 @@ export default function page() {
           </div>
         </div>
 
-        <div className="w-[95%] h-[20px] bg-blue-50 m-auto flex items-center  px-2 justify-between">
+        <div className="w-[95%] h-[20px]  m-auto flex items-center  px-2 justify-between">
           <p className="text-customgray">Subtotal</p>
           <p className="text-md font-semibold ">{price}</p>
         </div>
 
-        <div className="w-[95%] h-[20px] bg-blue-50 m-auto flex items-center mt-[20px] px-2 justify-between">
+        <div className="w-[95%] h-[20px]  m-auto flex items-center mt-[20px] px-2 justify-between">
           <p className="text-customgray">Tax</p>
           <p className="text-md font-semibold ">$ 0</p>
         </div>

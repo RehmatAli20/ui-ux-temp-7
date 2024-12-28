@@ -16,7 +16,7 @@ export default function page() {
   const types = searchParams.get("types");
   const logo = searchParams.get("logo");
   return (
-    <div className=" bg-customgray m-auto 2xl:w-[1440px] flex-col md:flex-row items-center justify-between flex  lg:pr-2 lg:gap-3  ">
+    <div className=" bg-[#F6F7F9] m-auto 2xl:w-[1440px] flex-col md:flex-row items-center justify-between flex  lg:pr-2 lg:gap-3  ">
       <div className="hidden md:block">
         <Board></Board>
       </div>
